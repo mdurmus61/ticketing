@@ -1,0 +1,539 @@
+{
+	"info": {
+		"_postman_id": "552c02e3-3300-499e-ac85-f4e73f7eae17",
+		"name": "ticketing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"createDTO\": {\n\t\t\"userName\": \"mdurmus\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create city",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"createDTO\": {\n\t\t\"name\": \"Istanbul\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/city",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"city"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create city 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"createDTO\": {\n\t\t\"name\": \"Ankara\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/city",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"city"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create company",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"createDTO\": {\n\t\t\"name\": \"THY\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/company",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create airport",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"createDTO\": {\n\t\t\"name\": \"Sabiha Gökçen Hava Limanı\",\n\t\t\"cityName\": \"Istanbul\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/airport",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"airport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create airport 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"createDTO\": {\n\t\t\"name\": \"Esenboğa Hava Limanı\",\n\t\t\"cityName\": \"Ankara\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/airport",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"airport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create route",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"createDTO\": {\n\t\t\"departureName\": \"Sabiha Gökçen Hava Limanı\",\n\t\t\"arrivalName\": \"Esenboğa Hava Limanı\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/route",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"route"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create flight",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"createDTO\": {\n\t\t\"companyName\": \"THY\",\n\t\t\"departureName\": \"Sabiha Gökçen Hava Limanı\",\n\t\t\"arrivalName\": \"Esenboğa Hava Limanı\",\n\t\t\"departureTime\": \"2020-04-18T20:00:00.000001-03:00\",\n\t\t\"arrivalTime\": \"2020-04-18T22:00:00.000001-03:00\",\n\t\t\"maxCapacity\": 10,\n\t\t\"defaultPrice\": 10.00\n\t}\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/flight",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flight"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create ticket",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"createDTO\": {\n\t\t\"userName\": \"mdurmus\",\n\t\t\"companyName\": \"THY\",\n\t\t\"departureName\": \"Sabiha Gökçen Hava Limanı\",\n\t\t\"arrivalName\": \"Esenboğa Hava Limanı\",\n\t\t\"departureTime\": \"2020-04-18T20:00:00.000001-03:00\",\n\t\t\"arrivalTime\": \"2020-04-18T22:00:00.000001-03:00\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/buy/ticket",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"buy",
+						"ticket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/users/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user by user name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/user/mdurmus",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"mdurmus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all cities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cities/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cities",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get city by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/city/Istanbul",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"city",
+						"Istanbul"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all companies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/companies/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"companies",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get company by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/company/THY",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"company",
+						"THY"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get airports",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/airports/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"airports",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get airport by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/airport/Esenbo%C4%9Fa%20Hava%20Liman%C4%B1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"airport",
+						"Esenbo%C4%9Fa%20Hava%20Liman%C4%B1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get routes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/routes/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"routes",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get routes by params",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/routes/by/params?departureName=Sabiha Gökçen Hava Limanı",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"routes",
+						"by",
+						"params"
+					],
+					"query": [
+						{
+							"key": "departureName",
+							"value": "Sabiha Gökçen Hava Limanı"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get flights by params",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/flights/by/params?companyName=THY",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"flights",
+						"by",
+						"params"
+					],
+					"query": [
+						{
+							"key": "companyName",
+							"value": "THY"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get ticket by ticket number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ticket/THY_1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ticket",
+						"THY_1"
+					],
+					"query": [
+						{
+							"key": "companyName",
+							"value": "THY",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete ticket by ticket number",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ticket/delete/THY_1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ticket",
+						"delete",
+						"THY_1"
+					],
+					"query": [
+						{
+							"key": "companyName",
+							"value": "THY",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
